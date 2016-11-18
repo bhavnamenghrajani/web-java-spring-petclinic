@@ -13,4 +13,4 @@ after_success:
   - eval $(aws ecr get-login --region us-east-1)
   - docker tag myrepo:latest 380606551729.dkr.ecr.us-east-1.amazonaws.com/myrepo:petclinic
   - docker push 380606551729.dkr.ecr.us-east-1.amazonaws.com/myrepo:petclinic
-- aws ecs run-task --cluster default --region us-east-1 --task-definition petclinic:1
+  - aws ecs run-task --cluster default --region us-east-1 --task-definition petclinic:1
